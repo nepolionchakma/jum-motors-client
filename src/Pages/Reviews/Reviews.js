@@ -3,13 +3,13 @@ import { Container } from 'react-bootstrap';
 
 
 const Reviews = () => {
-    const [products, setproducts] = useState([]);
+    const [products, setProducts] = useState([]);
 
 
     useEffect(() => {
         fetch("./fakeRating.json")
             .then(res => res.json())
-            .then(data => setproducts(data))
+            .then(data => setProducts(data))
     }, []);
     return (
         <div>
@@ -17,12 +17,13 @@ const Reviews = () => {
                 <div className="row m-0">
                     {
                         products.map(rating =>
-                            <div className="col-lg-3">
+                            <div className="col-lg-3"
+
+                                key={rating.id}>
 
 
                                 <h5>{rating.name}</h5>
                                 <h5>{rating.rating}</h5>
-                                <h5>{ }</h5>
                             </div>)
                     }
                 </div>
