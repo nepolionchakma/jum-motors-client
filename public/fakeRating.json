@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "name1",
+        "img": "img",
+        "rating": "4",
+        "details": "New Zealand's South Island brims with majestic landscapes at every turn, from dramatic mountains to fjords to glaciers. Here, you can admire the mountains of Fiordland National Park, a UNESCO World Heritage Site, from hiking trails or a boat on Milford Sound.",
+        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "name2",
+        "img": "img",
+        "rating": "5",
+        "details": "New Zealand's South Island brims with majestic landscapes at every turn, from dramatic mountains to fjords to glaciers. Here, you can admire the mountains of Fiordland National Park, a UNESCO World Heritage Site, from hiking trails or a boat on Milford Sound.",
+        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "name3",
+        "img": "img",
+        "rating": "4",
+        "details": "New Zealand's South Island brims with majestic landscapes at every turn, from dramatic mountains to fjords to glaciers. Here, you can admire the mountains of Fiordland National Park, a UNESCO World Heritage Site, from hiking trails or a boat on Milford Sound.",
+        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "name4",
+        "img": "img",
+        "rating": "3",
+        "details": "New Zealand's South Island brims with majestic landscapes at every turn, from dramatic mountains to fjords to glaciers. Here, you can admire the mountains of Fiordland National Park, a UNESCO World Heritage Site, from hiking trails or a boat on Milford Sound.",
+        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "name5",
+        "img": "img",
+        "rating": "5",
+        "details": "New Zealand's South Island brims with majestic landscapes at every turn, from dramatic mountains to fjords to glaciers. Here, you can admire the mountains of Fiordland National Park, a UNESCO World Heritage Site, from hiking trails or a boat on Milford Sound.",
+        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+    }
+]
