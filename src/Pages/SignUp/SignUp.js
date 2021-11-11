@@ -48,7 +48,7 @@ const SignUp = () => {
                     <Link to="/login" className="btn btn-primary fw-bold m-2">Log-In</Link>
                 </form>
                 <br />
-
+                <Link className="text-danger " to="" onClick={forgetPassword}>Forget Password?</Link>
                 <hr />
                 <div>
                     <div>

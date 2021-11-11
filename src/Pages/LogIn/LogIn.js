@@ -33,7 +33,8 @@ const LogIn = () => {
     const googleLogIn = () => {
         handleGoogleSignIn()
             .then(result => {
-                setUser(result.user);
+                const user = result.user;
+                saveUser(user.email, user.displayName);
                 setSuccessLogin();
                 history.push(redirect_url);
             })
@@ -56,7 +57,17 @@ const LogIn = () => {
                 setError(error.message);
             })
     }
-
+    const saveUser = (email, displayName) => {
+        const user = { email, displayName };
+        fetch("https://secure-lowlands-87242.herokuapp.com/users", {
+            method: "PUT",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(user)
+        })
+            .then()
+    }
 
     return (
         <div className="row p-5 m-0">
