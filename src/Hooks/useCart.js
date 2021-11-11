@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react';
-import { addToDb, getStoredCart } from '../FakeDB/fakeDB';
+import { addToDb, getStoredCart, clearTheCart } from '../LocalDataBase/LocalDataBase';
 import useFireBase from './useFireBase';
 
 
 const useCart = () => {
     const [cart, setCart] = useState([]);
-    const { services } = useFireBase();
+    const { products } = useFireBase();
     useEffect(() => {
         const savedCart = getStoredCart();
-        if (services.length) {
+        if (products.length) {
             const storedCart = [];
             for (const _id in savedCart) {
-                const addedProduct = services.find(service => service._id === _id);
+                const addedProduct = products.find(product => product._id === _id);
                 if (addedProduct) {
                     // set quantity
                     const quantity = savedCart[_id];
@@ -21,25 +21,16 @@ const useCart = () => {
             }
             setCart(storedCart);
         }
-        // })
+    }, [products]);
 
-
-    }, [services]);
-
-
-
-
-    const handleCart = (service) => {
-        const newCart = [...cart, service];
+    const handleCart = (product) => {
+        const newCart = [...cart, product];
         setCart(newCart);
         // local storage
-        addToDb(service._id);
+        addToDb(product._id);
     }
-    // const handleRemove = id => {
-    //     const newCart = cart.find(service => service._id !== _id);
-    //     setCart(newCart);
-    //     removeFromDb(id);
-    // }
+
+
 
     return [cart, setCart, handleCart];
 }
