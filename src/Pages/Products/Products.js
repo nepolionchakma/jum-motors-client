@@ -12,13 +12,12 @@ const Products = () => {
 
     return (
         <div>
-            <h2 className="mt-3">products</h2>
-            <h5> all</h5>
+            <h2 className="mt-3">All Products</h2>
             {
                 sliceData.length === 0 ?
                     <div className="d-flex justify-content-center py-5">
                         <div className="spinner-border  text-warning" role="status">
-                            <span className="sr-only"></span>
+
                         </div>
                     </div>
                     :

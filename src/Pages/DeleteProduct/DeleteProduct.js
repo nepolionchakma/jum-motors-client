@@ -15,8 +15,7 @@ const DeleteProduct = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.deletedCount) {
-
+                if (data.deletedCount > 0) {
                     const remaining = products.filter(product => products._id !== id);
                     setProducts(remaining);
                     reload();

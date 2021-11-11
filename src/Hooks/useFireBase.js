@@ -1,5 +1,6 @@
 import { getAuth, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, GithubAuthProvider, signOut, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, updateProfile } from "firebase/auth";
 import { useEffect, useState } from 'react';
+import { useHistory } from "react-router-dom";
 import initializeAuthentication from "../FireBase/firebase.initialize";
 
 initializeAuthentication();
@@ -12,6 +13,7 @@ const useFireBase = () => {
     const [user, setUser] = useState({});
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const history = useHistory();
     const [error, setError] = useState("");
     const [emailError, setEmailError] = useState();
     const [passwordError, setPasswordError] = useState();
@@ -54,7 +56,7 @@ const useFireBase = () => {
             setSuccess("");
         }
         else {
-            createNewUser(email, password);
+            createNewUser(email, password, history);
             setErrorpass("");
             setSuccess("");
         }
@@ -62,15 +64,20 @@ const useFireBase = () => {
 
 
     // create new user
-    const createNewUser = (email, password, displayName) => {
+    const createNewUser = (email, password, displayName, history) => {
         clearError("");
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user);
                 setError('');
-                setUserName(displayName);
+                const newUser = { email, displayName: name };
+                setUser(newUser);
+                saveUser(email, password, name, "POST")
+                updateProfile(auth.currentUser, { displayName: name })
+                    .then(() => { })
                 verifyEmail();
                 setSuccess('Successfully sign up And Now Check Mail for Verify');
+                history.replace("/");
             })
             .catch(error => {
                 setError(error.code)
@@ -79,10 +86,10 @@ const useFireBase = () => {
     }
 
     // user setup
-    const setUserName = () => {
-        updateProfile(auth.currentUser, { displayName: name })
-            .then(result => { })
-    }
+    // const setUserName = () => {
+    //     updateProfile(auth.currentUser, { displayName: name })
+    //         .then(result => { })
+    // }
     const verifyEmail = () => {
         sendEmailVerification(auth.currentUser)
             .then(result => { })
@@ -138,7 +145,17 @@ const useFireBase = () => {
             .then(data => setProducts(data))
     }, []);
 
-
+    const saveUser = (email, password, displayName, method) => {
+        const user = { email, password, displayName };
+        fetch("https://secure-lowlands-87242.herokuapp.com/users", {
+            method: method,
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(user)
+        })
+            .then()
+    }
 
     return {
         user,
