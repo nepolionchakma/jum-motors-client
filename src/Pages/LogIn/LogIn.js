@@ -48,7 +48,8 @@ const LogIn = () => {
     const githubLogIn = () => {
         handleGithubSignIn()
             .then(result => {
-                setUser(result.user);
+                const user = result.user;
+                saveUser(user.email, user.displayName);
                 setSuccessLogin();
                 history.push(redirect_url);
             })

@@ -13,6 +13,7 @@ import SignUp from './Pages/SignUp/SignUp';
 import Menu from './Shared/Menu/Menu';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import DashBoard from './Pages/DashBoard/DashBoard/DashBoard';
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
             </Route>
             <PrivateRoute path="/manage-products">
               <ManageProducts />
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard">
+              <DashBoard />
             </PrivateRoute>
             <Route path="/login">
               <LogIn />

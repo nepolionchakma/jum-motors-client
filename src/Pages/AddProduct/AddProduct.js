@@ -7,6 +7,7 @@ const AddService = () => {
 
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
+
         // console.log(data)
         axios.post("https://secure-lowlands-87242.herokuapp.com/products", data)
             .then(res => {

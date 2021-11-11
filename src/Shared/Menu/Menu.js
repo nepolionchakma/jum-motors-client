@@ -18,6 +18,7 @@ const Menu = () => {
                             <Nav.Link as={HashLink} to="/login">LogIn</Nav.Link>
                             <Nav.Link as={HashLink} to="/signup">SignUp</Nav.Link>
                             <Nav.Link as={HashLink} to="/manage-products">Add Product</Nav.Link>
+                            <Nav.Link as={HashLink} to="/dashboard">Dashboard</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                     <div className="d-flex justify-content-evenly mx-auto p-2">
