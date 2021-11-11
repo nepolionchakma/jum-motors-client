@@ -5,7 +5,9 @@ import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../Hooks/useAuth';
 
 const Menu = () => {
+
     const { user, handleSignOut } = useAuth();
+
     return (
         <div>
             <Navbar bg="light" expand="lg">
@@ -39,7 +41,6 @@ const Menu = () => {
                                 <button onClick={handleSignOut} className="btn btn-danger p-1">SignOut</button>
                             </div>
                         }
-
                     </div>
                 </Container>
             </Navbar>

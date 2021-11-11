@@ -12,14 +12,14 @@ const LogIn = () => {
     } = useAuth();
     const location = useLocation();
     const history = useHistory();
-    const redirect_url = location.state?.from || "/";
+    const redirect_url = location?.state?.from || "/";
 
     // sign in with email and password
     const signInUser = (email, password) => {
         handleSignIn(email, password)
             .then(result => {
                 setUser(result.user);
-                history.push(redirect_url);
+                history.replace(redirect_url);
                 setSuccessLogin();
             })
             .catch((error) => {
@@ -36,7 +36,7 @@ const LogIn = () => {
                 const user = result.user;
                 saveUser(user.email, user.displayName);
                 setSuccessLogin();
-                history.push(redirect_url);
+                history.replace(redirect_url);
             })
             .catch((error) => {
                 // Handle Errors here.
@@ -51,7 +51,7 @@ const LogIn = () => {
                 const user = result.user;
                 saveUser(user.email, user.displayName);
                 setSuccessLogin();
-                history.push(redirect_url);
+                history.replace(redirect_url);
             })
             .catch((error) => {
                 // Handle Errors here.

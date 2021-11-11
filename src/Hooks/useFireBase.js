@@ -13,6 +13,7 @@ const useFireBase = () => {
     const [user, setUser] = useState({});
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [password2, setPassword2] = useState("");
     const history = useHistory();
     const [error, setError] = useState("");
     const [emailError, setEmailError] = useState();
@@ -20,8 +21,14 @@ const useFireBase = () => {
     const [success, setSuccess] = useState();
     const [loginSuccess, setSuccessLogin] = useState();
     const [errorpass, setErrorpass] = useState("");
+    const [admin, setAdmin] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
-
+    useEffect(() => {
+        fetch(`https://secure-lowlands-87242.herokuapp.com/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+    }, [user.email])
     // provider
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
@@ -33,6 +40,9 @@ const useFireBase = () => {
     }
     const handlePassword = e => {
         setPassword(e.target.value);
+    }
+    const handlePassword2 = e => {
+        setPassword2(e.target.value);
     }
     const nameChange = e => {
         setName(e.target.value);
@@ -55,6 +65,10 @@ const useFireBase = () => {
             setErrorpass('Password at least 6 ');
             setSuccess("");
         }
+        if (password !== password2) {
+            alert("Password Not Match");
+            return
+        }
         else {
             createNewUser(email, password, history);
             setErrorpass("");
@@ -66,6 +80,7 @@ const useFireBase = () => {
     // create new user
     const createNewUser = (email, password, displayName, history) => {
         clearError("");
+        setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user);
@@ -83,6 +98,7 @@ const useFireBase = () => {
                 setError(error.code)
                 setError(error.message)
             })
+            .finally(() => setIsLoading(false));
     }
 
     // user setup
@@ -120,8 +136,10 @@ const useFireBase = () => {
 
     // sign out
     const handleSignOut = () => {
+        setIsLoading(true);
         signOut(auth)
             .then(() => { })
+            .finally(() => setIsLoading(false));
     };
     // auth Change
     useEffect(() => {
@@ -129,10 +147,15 @@ const useFireBase = () => {
             if (user) {
                 // clearInput();
                 setUser(user);
+                // getIdToken(user)
+                //     .then(idToken => {
+                //         setToken(idToken);
+                //     })
             }
             else {
                 setUser({});
             }
+            setIsLoading(false);
         });
         return () => unsubscribed;
     }, []);
@@ -162,7 +185,7 @@ const useFireBase = () => {
         error,
         nameChange,
         handleEmail,
-        handlePassword,
+        handlePassword, handlePassword2,
         handleSignUp,
         handleGoogleSignIn,
         handleGithubSignIn,
@@ -173,9 +196,10 @@ const useFireBase = () => {
         handleSignIn,
         loginSuccess,
         emailError,
-        passwordError,
+        passwordError, isLoading,
         errorpass, clearError, logInUser, success,
-        setSuccessLogin, setError, setUser, successLogin,
+        setSuccessLogin, setError, setUser, successLogin, admin,
+        // token
     }
 
 }

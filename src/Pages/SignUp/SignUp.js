@@ -9,7 +9,7 @@ const SignUp = () => {
     const {
         nameChange,
         handleEmail,
-        handlePassword,
+        handlePassword, handlePassword2,
         handleGoogleSignIn,
         handleGithubSignIn,
         handleSignUp,
@@ -40,6 +40,12 @@ const SignUp = () => {
                         <label htmlFor="inputPassword3" className="col-sm-3 col-form-label">Password</label>
                         <div className="col-sm-9">
                             <input onChange={handlePassword} required placeholder="Password" type="password" className="form-control" id="inputPassword3" />
+                        </div>
+                    </div>
+                    <div className="row mb-3">
+                        <label htmlFor="inputPassword3" className="col-sm-3 col-form-label">ReType Password</label>
+                        <div className="col-sm-9">
+                            <input onChange={handlePassword2} required placeholder="Password" type="password" className="form-control" id="inputPassword3" />
                         </div>
                     </div>
                     <div className="text-danger fw-bold">{success}{errorpassempty}{errorpass}{errorEmail}</div>
