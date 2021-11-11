@@ -1,10 +1,11 @@
 import { getAuth, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, GithubAuthProvider, signOut, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, updateProfile } from "firebase/auth";
-import initializeAuthentication from '../Firebase/firebase.initialize';
 import { useEffect, useState } from 'react';
+import initializeAuthentication from "../FireBase/firebase.initialize";
 
 initializeAuthentication();
 
-const useFirebase = () => {
+
+const useFireBase = () => {
 
     const auth = getAuth();
     const [name, setName] = useState();
@@ -129,13 +130,12 @@ const useFirebase = () => {
         return () => unsubscribed;
     }, []);
 
-
-    // all fake data
-    const [products, setproducts] = useState([]);
+    // Data Load
+    const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch("https://safe-savannah-74547.herokuapp.com/products")
+        fetch("https://secure-lowlands-87242.herokuapp.com/products")
             .then(res => res.json())
-            .then(data => setproducts(data))
+            .then(data => setProducts(data))
     }, []);
 
 
@@ -151,7 +151,7 @@ const useFirebase = () => {
         handleGithubSignIn,
         handleSignOut,
         products,
-        setproducts,
+        setProducts,
         forgetPassword,
         handleSignIn,
         loginSuccess,
@@ -162,4 +162,4 @@ const useFirebase = () => {
     }
 
 }
-export default useFirebase;
+export default useFireBase;

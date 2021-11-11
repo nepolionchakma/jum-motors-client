@@ -8,6 +8,7 @@ import {
 import Home from './Pages/Home/Home';
 import ProductDetails from './Pages/ProductDetails/ProductDetails';
 import AddProduct from './Pages/AddProduct/AddProduct';
+import ManageProducts from './Pages/ManageProducts/ManageProducts';
 
 function App() {
   return (
@@ -20,11 +21,14 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/product-details/:id">
+          <Route path="/products/:_id">
             <ProductDetails />
           </Route>
           <Route path="/add-product">
             <AddProduct />
+          </Route>
+          <Route path="/manage-products">
+            <ManageProducts />
           </Route>
         </Switch>
       </Router>
