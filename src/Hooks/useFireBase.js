@@ -160,12 +160,19 @@ const useFireBase = () => {
         return () => unsubscribed;
     }, []);
 
-    // Data Load
+    //Products Data Load
     const [products, setProducts] = useState([]);
     useEffect(() => {
         fetch("https://secure-lowlands-87242.herokuapp.com/products")
             .then(res => res.json())
             .then(data => setProducts(data))
+    }, []);
+    // Review Data Load
+    const [reviews, setReviews] = useState([]);
+    useEffect(() => {
+        fetch("https://secure-lowlands-87242.herokuapp.com/reviews")
+            .then(res => res.json())
+            .then(data => setReviews(data))
     }, []);
 
     const saveUser = (email, password, displayName, method) => {
@@ -197,7 +204,7 @@ const useFireBase = () => {
         loginSuccess,
         emailError,
         passwordError, isLoading,
-        errorpass, clearError, logInUser, success,
+        errorpass, clearError, logInUser, success, reviews,
         setSuccessLogin, setError, setUser, successLogin, admin,
         // token
     }

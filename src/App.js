@@ -14,6 +14,7 @@ import Menu from './Shared/Menu/Menu';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import DashBoard from './Pages/DashBoard/DashBoard/DashBoard';
+import AllProducts from './Pages/AllProducts/AllProducts';
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
             </Route>
             <Route path="/products/:_id">
               <ProductDetails />
+            </Route>
+            <Route path="/cars">
+              <AllProducts />
             </Route>
             <Route path="/add-product">
               <AddProduct />

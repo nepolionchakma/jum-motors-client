@@ -17,9 +17,9 @@ const Menu = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link as={HashLink} to="/home">Home</Nav.Link>
-                            <Nav.Link as={HashLink} to="/login">LogIn</Nav.Link>
-                            <Nav.Link as={HashLink} to="/signup">SignUp</Nav.Link>
-                            <Nav.Link as={HashLink} to="/manage-products">Add Product</Nav.Link>
+                            <Nav.Link as={HashLink} to="/cars">Cars</Nav.Link>
+                            <Nav.Link as={HashLink} to="/about">About</Nav.Link>
+                            <Nav.Link as={HashLink} to="/contact-us">Contact Us</Nav.Link>
                             <Nav.Link as={HashLink} to="/dashboard">Dashboard</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

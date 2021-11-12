@@ -25,13 +25,10 @@ const AddService = () => {
                 <h2 className="text-color">Add Product</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input {...register("name")} placeholder="Name" required />
-                    <input {...register("country")} placeholder="Country" required />
-                    <input type=""{...register("rate")} placeholder="Rate" required />
-                    <input {...register("review")} placeholder="Review" required />
-                    <input type="number" {...register("price")} placeholder="Price" required />
-                    <input type="duration" {...register("duration")} placeholder="Duration (Hours)." required />
-                    <input {...register("category")} placeholder="Category" required />
-                    <input type="number" step="0" min="0" max="100"{...register("offer")} placeholder="Discount Offer" required />
+                    <input {...register("price")} placeholder="Price" required />
+                    <input {...register("rating")} placeholder="Rating" required />
+                    <input {...register("year")} placeholder="Year" required />
+                    <input  {...register("fuel")} placeholder="Fuel" required />
                     <textarea  {...register("details")} placeholder="Details" required />
                     <input  {...register("img")} placeholder="Image URL" required />
                     <input type="submit" />

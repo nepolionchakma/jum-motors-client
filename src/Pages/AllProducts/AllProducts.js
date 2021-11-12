@@ -4,18 +4,15 @@ import Product from '../Product/Product';
 import { Link } from 'react-router-dom';
 
 
-const Products = () => {
+const AllProducts = () => {
 
     // Destructuring Data
     const { products } = useFireBase()
-    // console.log(products)
-    const sliceData = products.slice(0, 8);
-    console.log(sliceData)
     return (
         <div className="container py-5">
-            <h2 className="mt-3">Featured Items</h2>
+            <h2 className="mt-3">All Cars</h2>
             {
-                sliceData.length === 0 ?
+                products.length === 0 ?
                     <div className="d-flex justify-content-center py-5">
                         <div className="spinner-border  text-warning" role="status">
 
@@ -24,7 +21,7 @@ const Products = () => {
                     :
                     <div className="row m-0">
                         {
-                            sliceData.map(product =>
+                            products.map(product =>
                                 <Product
                                     key={product._id}
                                     product={product}
@@ -35,9 +32,8 @@ const Products = () => {
 
                     </div>
             }
-            <Link className="btn btn-danger" to="/cars">Explore All Cars</Link>
         </div>
     );
 };
 
-export default Products;
+export default AllProducts;
