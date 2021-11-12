@@ -22,6 +22,7 @@ import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from '../../../Hooks/useAuth';
 import AdminRoute from '../../AdminRoute/AdminRoute';
 import Menu from '../../../Shared/Menu/Menu';
+import AllUsers from '../../AllUsers/AllUsers';
 
 const drawerWidth = 240;
 
@@ -39,9 +40,15 @@ const DashBoard = (props) => {
             <Toolbar />
             <Divider />
             <Link to={`${url}`}><Button>Dashboard</Button></Link>
-            {admin && <Box>
-                <Link to={`${url}/make-admin`}><Button>Make Admin</Button></Link>
-                <Link to={`${url}/add-product`}><Button>Add Product</Button></Link></Box>}
+            {admin &&
+
+                <Box>
+                    <Link to={`${url}/make-admin`}><Button>Make Admin</Button></Link>
+                    <Link to={`${url}/add-product`}><Button>Add Product</Button></Link>
+                    <Link to={`${url}/all-users`}><Button>All Users</Button></Link>
+
+
+                </Box>}
             <Divider />
         </div>
     );
@@ -121,6 +128,9 @@ const DashBoard = (props) => {
                             </AdminRoute>
                             <AdminRoute path={`${path}/add-product`}>
                                 <AddProduct></AddProduct>
+                            </AdminRoute>
+                            <AdminRoute path={`${path}/all-users`}>
+                                <AllUsers></AllUsers>
                             </AdminRoute>
                         </Switch>
                     </Box>

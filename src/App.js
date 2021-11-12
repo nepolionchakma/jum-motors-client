@@ -15,6 +15,9 @@ import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import DashBoard from './Pages/DashBoard/DashBoard/DashBoard';
 import AllProducts from './Pages/AllProducts/AllProducts';
+import Cart from './Pages/Cart/Cart';
+import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
+import AllOrders from './Pages/DashBoard/AllOrders/AllOrders';
 
 function App() {
   return (
@@ -29,11 +32,17 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
+            <Route path="/order">
+              <AllOrders></AllOrders>
+            </Route>
             <Route path="/products/:_id">
               <ProductDetails />
             </Route>
             <Route path="/cars">
               <AllProducts />
+            </Route>
+            <Route path="/place-order">
+              <PlaceOrder />
             </Route>
             <Route path="/add-product">
               <AddProduct />
