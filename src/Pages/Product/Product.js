@@ -2,28 +2,29 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import "./Product.css";
-import { faClock, faLocationArrow, faTrafficLight } from "@fortawesome/free-solid-svg-icons";
+import { faClock, faGasPump, } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCloudflare } from '@fortawesome/free-brands-svg-icons';
+import { faPaypal } from '@fortawesome/free-brands-svg-icons';
 import { faStar } from '@fortawesome/free-regular-svg-icons';
 
 const Product = (props) => {
     const { name, price, img, _id, details, year, fuel, rating } = props.product;
-    console.log(props)
     return (
-        <div className="col-lg-3 my-3 text-start p-2">
+        <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-3 text-start p-2">
             <div className="border p-3">
                 <img className="w-100 my-2" src={img} alt="" />
                 <h3>{name}</h3>
+
+                <span><FontAwesomeIcon className="text-danger my-auto" icon={faClock} /> {year}</span>
+                <span><FontAwesomeIcon className="text-danger mx-2" icon={faStar} /> {rating}</span>
                 <p className="limit-4 text-muted">{details}</p>
-                <div className="d-flex justify-content-between align-items-center">
-                    <h6><FontAwesomeIcon className="text-warning" icon={faClock} /> {year}</h6>
-                    <h6><FontAwesomeIcon className="text-warning" icon={faLocationArrow} /> {fuel}</h6>
-                    <h4><FontAwesomeIcon className="text-warning" icon={faTrafficLight} /> {price}</h4>
+                <div className="d-flex justify-content-between align-items-center border p-2">
+                    <h6><FontAwesomeIcon className="text-danger" icon={faGasPump} /> {fuel}</h6>
+                    <h4 className="text-danger fw-bold"><FontAwesomeIcon className="text-danger fw-bold" icon={faPaypal} /> {price}</h4>
                 </div>
-                <div className="d-flex justify-content-between align-items-center">
+                <div className="d-flex justify-content-center align-items-center my-2">
                     <Link to={`/products/${_id}`}><Button className="btn btn-danger">Purchase Now</Button></Link>
-                    <span><FontAwesomeIcon className="text-warning" icon={faStar} /> {rating}</span>
+
                 </div>
             </div>
         </div>

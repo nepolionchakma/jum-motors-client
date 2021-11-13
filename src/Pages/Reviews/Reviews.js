@@ -68,6 +68,7 @@ const Reviews = () => {
     return (
         <div>
             <Container>
+                <h4 className="my-3 fw-bold">Product Review</h4>
                 <Box
                     sx={{
                         width: 200,
@@ -93,13 +94,13 @@ const Reviews = () => {
                     )}
                 </Box>
                 <form onSubmit={handleOrdersDataSubmit}>
-                    <input className="w-100 my-1" onBlur={handleOnBlur} type="text" name="name" id="" defaultValue={user.displayName} />
+                    <input className="w-100 my-1" onBlur={handleOnBlur} type="text" name="name" id="" defaultValue={user.displayName} disabled />
                     <br />
-                    <input className="w-100 my-1" onBlur={handleOnBlur} type="text" name="email" id="" defaultValue={user.email} />
+                    <input className="w-100 my-1" onBlur={handleOnBlur} type="text" name="email" id="" defaultValue={user.email} disabled />
                     <br />
                     <textarea className="w-100 my-1" onBlur={handleOnBlur} type="text" name="message" id="" placeholder="Message" />
                     <br />
-                    <input type="submit" value="Place Order" />
+                    <input type="submit" value="Review Submit" />
                 </form>
             </Container>
         </div>

@@ -21,8 +21,10 @@ import DashBoardHome from '../DashBoardHome/DashBoardHome';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from '../../../Hooks/useAuth';
 import AdminRoute from '../../AdminRoute/AdminRoute';
-import Menu from '../../../Shared/Menu/Menu';
 import AllUsers from '../../AllUsers/AllUsers';
+import DeleteOrder from '../DeleteOrder/DeleteOrder';
+import ManageAllProducts from '../ManageAllProducts/ManageAllProducts';
+import AllOrders from '../AllOrders/AllOrders';
 
 const drawerWidth = 240;
 
@@ -30,7 +32,7 @@ const DashBoard = (props) => {
     let { path, url } = useRouteMatch();
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    const { admin } = useAuth();
+    const { admin, handleSignOut } = useAuth();
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -39,17 +41,36 @@ const DashBoard = (props) => {
         <div>
             <Toolbar />
             <Divider />
-            <Link to={`${url}`}><Button>Dashboard</Button></Link>
-            {admin &&
+            <table className="table  table-striped">
+                <tbody>
+                    <tr>
+                        <td><Link className="text-decoration-none" to="/">Home</Link></td>
+                    </tr>
+                    <tr>
+                        <td><Link className="text-decoration-none" to={`${url}`}>Dashboard</Link></td>
+                    </tr>
+                    {admin &&
 
-                <Box>
-                    <Link to={`${url}/make-admin`}><Button>Make Admin</Button></Link>
-                    <Link to={`${url}/add-product`}><Button>Add Product</Button></Link>
-                    <Link to={`${url}/all-users`}><Button>All Users</Button></Link>
+                        <>
+                            <tr>
+                                <td><Link className="text-decoration-none" to={`${url}/manage-all-orders`}>Manage All Orders</Link></td>
+                            </tr>
+                            <tr>
+                                <td><Link className="text-decoration-none" to={`${url}/make-admin`}>Make Admin</Link></td>
+                            </tr>
+                            <tr>
+                                <td><Link className="text-decoration-none" to={`${url}/manage-all-product`}>Manage All Product</Link></td>
+                            </tr>
+                            <tr>
+                                <td><Link className="text-decoration-none" to={`${url}/all-users`}>All Users</Link></td>
+                            </tr>
+                        </>}
+                    <tr>
+                        <td><Link to="" className="text-danger my-auto" onClick={handleSignOut} >SignOut</Link></td>
+                    </tr>
 
-
-                </Box>}
-            <Divider />
+                </tbody>
+            </table>
         </div>
     );
 
@@ -123,11 +144,14 @@ const DashBoard = (props) => {
                             <Route exact path={path}>
                                 <DashBoardHome></DashBoardHome>
                             </Route>
+                            <AdminRoute path={`${path}/manage-all-orders`}>
+                                <AllOrders></AllOrders>
+                            </AdminRoute>
                             <AdminRoute path={`${path}/make-admin`}>
                                 <MakeAdmin></MakeAdmin>
                             </AdminRoute>
-                            <AdminRoute path={`${path}/add-product`}>
-                                <AddProduct></AddProduct>
+                            <AdminRoute path={`${path}/manage-all-product`}>
+                                <ManageAllProducts></ManageAllProducts>
                             </AdminRoute>
                             <AdminRoute path={`${path}/all-users`}>
                                 <AllUsers></AllUsers>

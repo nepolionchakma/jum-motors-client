@@ -9,7 +9,7 @@ const Menu = () => {
     const { user, handleSignOut } = useAuth();
 
     return (
-        <div>
+        <div className="sticky-top ">
             <Navbar bg="light" expand="lg">
                 <Container>
                     <Navbar.Brand as={HashLink} to="/home">JUM MOTORS</Navbar.Brand>
@@ -22,26 +22,32 @@ const Menu = () => {
                             <Nav.Link as={HashLink} to="/contact-us">Contact Us</Nav.Link>
                             <Nav.Link as={HashLink} to="/dashboard">Dashboard</Nav.Link>
                         </Nav>
-                    </Navbar.Collapse>
-                    <div className="d-flex justify-content-evenly mx-auto p-2">
-                        {!user?.displayName ?
-                            <div className="d-flex align-items-center mx-auto">
-                                <Link className="px-1 jum-text p-2 ms-2" to="/login">Login</Link>
-                                <Link className="px-1 jum-text p-2" to="/signup">Signup</Link>
-                            </div> :
-                            <div className="mx-2 mx-auto">
-                                <span className="text-white">Hi,{user.displayName}</span>
-                                <img
-                                    style={{
-                                        width: '30px',
-                                        borderRadius: '50%',
-                                        margin: '0px 5px'
-                                    }}
-                                    src={user.photoURL} alt="" />
-                                <button onClick={handleSignOut} className="btn btn-danger p-1">SignOut</button>
+                        <Nav>
+                            <div className="me-auto">
+                                <div className="me-auto p-2">
+                                    {!user?.displayName ?
+                                        <div className="align-items-center mx-auto">
+                                            <Link className="px-1 jum-text p-2 ms-2" to="/login">Login</Link>
+                                            <Link className="px-1 jum-text p-2" to="/signup">Signup</Link>
+                                        </div> :
+                                        <div className="d-flex justify-content-evenly align-items-center">
+                                            <span className="">Hi,{user.displayName}</span>
+                                            <img
+                                                style={{
+                                                    width: '30px',
+                                                    borderRadius: '50%',
+                                                    margin: '0px 5px'
+                                                }}
+                                                src={user.photoURL} alt="" />
+                                            <button onClick={handleSignOut} className="btn btn-danger p-1">SignOut</button>
+                                        </div>
+                                    }
+                                </div>
                             </div>
-                        }
-                    </div>
+                        </Nav>
+
+                    </Navbar.Collapse>
+
                 </Container>
             </Navbar>
         </div>

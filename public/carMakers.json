@@ -1,57 +1,74 @@
 [
     {
-        "maker": "name1",
-        "items": 2,
-        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+        "maker": "Acura",
+        "items": 121,
+        "id": 1,
+        "img": "https://i.ibb.co/wMBmv11/acura-190x132.png"
     },
     {
-        "maker": "name1",
-        "items": 2,
-        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+        "maker": "Bentley",
+        "items": 222,
+        "id": 2,
+        "img": " https://i.ibb.co/ByTn1vG/bentley-190x132.png"
     },
     {
-        "maker": "name1",
-        "items": 2,
-        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+        "maker": "BMW",
+        "items": 757,
+        "id": 3,
+        "img": "https://i.ibb.co/6RJ7Wbf/bmw-189x131.png"
     },
     {
-        "maker": "name1",
-        "items": 2,
-        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+        "maker": "Chevrolet",
+        "items": 462,
+        "id": 4,
+        "img": "https://i.ibb.co/fNCvsSk/chevy-189x131.png"
     },
     {
-        "maker": "name1",
-        "items": 2,
-        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+        "maker": "Ford",
+        "items": 456,
+        "id": 5,
+        "img": "https://i.ibb.co/fGv7L10/ford-189x131.png"
     },
     {
-        "maker": "name1",
-        "items": 2,
-        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+        "maker": "Honda",
+        "items": 645,
+        "id": 6,
+        "img": "https://i.ibb.co/L0ZGSCs/honda-189x131.png"
     },
     {
-        "maker": "name1",
-        "items": 2,
-        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+        "maker": "Hyundai",
+        "items": 213,
+        "id": 7,
+        "img": "https://i.ibb.co/BrDm8X8/hyundai-190x132.png"
     },
     {
-        "maker": "name1",
-        "items": 2,
-        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+        "maker": "Kia",
+        "items": 121,
+        "id": 8,
+        "img": "https://i.ibb.co/zJQbprN/kia-190x132.png"
     },
     {
-        "maker": "name1",
-        "items": 2,
-        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+        "maker": "Sedan",
+        "items": 488,
+        "id": 9,
+        "img": "https://i.ibb.co/6DqrQvJ/sedan-179x79.png"
     },
     {
-        "maker": "name1",
-        "items": 2,
-        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+        "maker": "Sport",
+        "items": 687,
+        "id": 10,
+        "img": "https://i.ibb.co/FnNRws0/Sport-car-179x79.png"
     },
     {
-        "maker": "name1",
-        "items": 2,
-        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+        "maker": "SUV",
+        "items": 325,
+        "id": 11,
+        "img": " https://i.ibb.co/xzKpCwz/SUV-179x79.png"
+    },
+    {
+        "maker": "Coupe",
+        "items": 45,
+        "id": 12,
+        "img": "https://i.ibb.co/nRGrvBw/Coupe-179x79.png"
     }
 ]

@@ -1,56 +1,56 @@
 [
     {
-        "name": "name1",
-        "price": 300,
+        "name": "2016 Mercedes-Benz C-Class C300 4MATIC",
+        "price": 35000,
         "rating": "5",
-        "year": "2022",
-        "fuel": "Electric",
-        "details": "New Zealand's South Island brims with majestic landscapes at every turn, from dramatic mountains to fjords to glaciers. Here, you can admire the mountains of Fiordland National Park, a UNESCO World Heritage Site, from hiking trails or a boat on Milford Sound.",
-        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+        "year": "2015",
+        "fuel": "Hybrid",
+        "details": "Stunning cabin quality, good performance and elegant styling make the C-Class a solid choice among its rivals. It’s more Mercedes-Benz luxury than sport, but it continues to justify having earned Cars.com’s Best of 2015 award.The C-Class comes in myriad variants with all sorts of drivetrains. The C-Class coupe, which skipped 2016, will arrive at dealerships soon as a 2017 model with a redesign along the lines of the sedan. A C-Class convertible also will join the fray. This review covers the sedan.For 2016, the C400 sedan is replaced by the quicker C450 AMG, which slots between the base C300 and performance-topping Mercedes-AMG C63 and C63 S. There’s also a new C350e plug-in hybrid. See all the changes from 2015 to 2016 here, or compare the 2016 trim levels here.4-Matic, which is what Mercedes-Benz calls their all-wheel system, is optional on the C300 and standard on the C450 AMG. It’s unavailable on the C63 and plug-in hybrid models. We evaluated the C450 AMG, to which I’ll devote most of this review, but our review of the 2015 C300 gives a broader overview of the current-generation C-Class.",
+        "img": "https://i.ibb.co/BTM4m1t/motor-1.jpg"
     },
     {
-        "name": "name2",
-        "price": 300,
+        "name": "Nissan Altima 2019",
+        "price": 18000,
         "rating": "5",
-        "year": "2022",
-        "fuel": "Electric",
-        "details": "New Zealand's South Island brims with majestic landscapes at every turn, from dramatic mountains to fjords to glaciers. Here, you can admire the mountains of Fiordland National Park, a UNESCO World Heritage Site, from hiking trails or a boat on Milford Sound.",
-        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+        "year": "2019",
+        "fuel": "Gasoline",
+        "details": "Altima is a very good used midsize car. Freshly redesigned for 2019, this Nissan distinguishes itself as a compelling sedan. It’s well-equipped with plenty of easy-to-use tech features, it has a roomy cabin with comfortable seats, and it gets great fuel economy estimates. The Altima is even available with all-wheel drive, a rarity in this segment.However, this vehicle lacks the engaging handling and premium cabin materials of some rivals.Why You Can Trust Us.Our goal is to provide you with the information you need to make car shopping a breeze. You'll find everything you need to know about the Altima in our comprehensive review. It combines concrete data like fuel economy estimates and cargo space dimensions with professional evaluations from 27 automotive sources.We’ve been reviewing cars since 2007, and our Best Cars team has more than 75 years of combined automotive experience. We also award the Best Cars for the Money, Best Cars for Families, and Best Vehicle Brands on an annual basis. To ensure our impartiality, a third party handles our advertising, and we don't accept expensive gifts from automakers.",
+        "img": "https://i.ibb.co/z4cSNtV/nissan-altima-1-798x466.jpg"
     },
     {
-        "name": "name3",
-        "price": 300,
+        "name": "Acura RDX 2015",
+        "price": 59000,
         "rating": "5",
-        "year": "2022",
-        "fuel": "Electric",
-        "details": "New Zealand's South Island brims with majestic landscapes at every turn, from dramatic mountains to fjords to glaciers. Here, you can admire the mountains of Fiordland National Park, a UNESCO World Heritage Site, from hiking trails or a boat on Milford Sound.",
-        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+        "year": "2021",
+        "fuel": "Diesel",
+        "details": "The 2015 Acura RDX is available in one trim. It comes standard with a V6 engine paired to a six-speed automatic transmission with sport paddle shifters. Standard features include dual-zone automatic climate control, proximity keyless entry, push-button start, cruise control, alloy wheels, a rearview camera, leather upholstery, heated and power-adjustable front seats, and a moonroof. You’ll also get a 5-inch display screen, Bluetooth, a USB port, satellite radio, a seven-speaker stereo, and Pandora compatibility.When it was new, Acura offered the 2015 RDX with a Technology package. This includes a power tailgate, fog lights, a navigation system, an 8-inch display, and a 10-speaker surround-sound system.",
+        "img": "https://i.ibb.co/bQNHHTf/34-798x466.jpg"
     },
     {
-        "name": "name4",
-        "price": 300,
+        "name": "Tesla Roadster 2021",
+        "price": 109000,
         "rating": "5",
-        "year": "2022",
+        "year": "2021",
         "fuel": "Electric",
-        "details": "New Zealand's South Island brims with majestic landscapes at every turn, from dramatic mountains to fjords to glaciers. Here, you can admire the mountains of Fiordland National Park, a UNESCO World Heritage Site, from hiking trails or a boat on Milford Sound.",
-        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+        "details": "The original Tesla Roadster put the all-electric automaker on the map, even if most Model S and Model X buyers don't remember it. Originally slated to make its return in 2021, the new model hasn't yet hit the market, leading us to believe it's been delayed. The second-generation Roadster bests it predecessor by adding two small rear seats, significantly more driving range, and a much higher level of performance. Tesla CEO Elon Musk boasted about a 1.9-second 60-mph time and a 250-mph top speed when the Roadster concept was unveiled back in 2017—figures we very much hope will prove accurate when this sports car finally arrives.What's New for 2023?The Roadster will be a new addition to the Tesla lineup when it eventually enters production, resurrecting the nameplate worn by the company's first model back in 2008. Tesla originally announced the sports car as a 2021 model, but since then we've heard nothing, so we expect the Roadster has been delayed.",
+        "img": "https://i.ibb.co/XWbwT8c/01-24-825x483.jpg"
     },
     {
-        "name": "name5",
-        "price": 300,
+        "name": "Lexus RX-350 2021",
+        "price": 22000,
         "rating": "5",
-        "year": "2022",
-        "fuel": "Electric",
-        "details": "New Zealand's South Island brims with majestic landscapes at every turn, from dramatic mountains to fjords to glaciers. Here, you can admire the mountains of Fiordland National Park, a UNESCO World Heritage Site, from hiking trails or a boat on Milford Sound.",
-        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+        "year": "2021",
+        "fuel": "Hybrid",
+        "details": "The original Lexus RX was a hugely influential vehicle, arriving in the late 1990s to help pioneer the luxury crossover SUV segment. It's been the template for dozens of competitors since. The latest 2021 RX 350 does its predecessors proud. It's quiet, comfortable and offers a lot of features for less money than much of the competition. There's also a fuel-efficient RX 450h hybrid version and longer RX 350L that uses the extra space to fit a third row of seating (both of those are reviewed separately).The RX 350 does have strong competition, however. The Acura MDX is its closest rival, offering similar features and performance plus a roomy third-row seat. We also like the Mercedes-Benz GLE and BMW X5, though both of those cost significantly more than the RX 350. On the whole, the 2021 RX 350 is a smart pick if you're looking for a comfortable luxury crossover SUV.",
+        "img": "https://i.ibb.co/jrx8630/01-20-825x483.jpg"
     },
     {
-        "name": "name6",
-        "price": 300,
+        "name": "Honda Accord 2021",
+        "price": 24000,
         "rating": "5",
-        "year": "2022",
-        "fuel": "Electric",
-        "details": "New Zealand's South Island brims with majestic landscapes at every turn, from dramatic mountains to fjords to glaciers. Here, you can admire the mountains of Fiordland National Park, a UNESCO World Heritage Site, from hiking trails or a boat on Milford Sound.",
-        "img": "https://motors.stylemixthemes.com/wp-content/uploads/2015/11/nissan_altima_1-798x466.jpeg"
+        "year": "2021",
+        "fuel": "Gasoline",
+        "details": "Although SUVs and crossovers are the people haulers these days, we think those folks are missing out by not considering the superb 2022 Honda Accord sedan. The Accord can do most things your average compact crossover can do, and its spry handling will give its driver more of a thrill should they encounter a twisty road. Two turbocharged engines are offered, as is a hybrid powertrain that provides a more efficient twist on the daily commute. With a commodious trunk and enough space for four adults to relax in comfort, the Accord is also an ideal road-trip partner, made even better by its comprehensive set of standard driver-assistance features and intuitive infotainment system. There's a reason the Accord happens to find its way onto our annual 10Best and Editors' Choice lists: It's a winner.",
+        "img": "https://i.ibb.co/jGQwMbv/01-13-825x483.jpg"
     }
 ]

@@ -6,6 +6,7 @@ import ChooseUs from '../ChooseUs/ChooseUs';
 import ClientViews from '../ClientViews/ClientViews';
 import Products from '../Products/Products';
 import ReviewsItems from '../ReviewsItems/ReviewsItems';
+import Footer from '../Footer/Footer';
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <ClientViews></ClientViews>
             <ChooseUs></ChooseUs>
             <ReviewsItems></ReviewsItems>
+            <Footer></Footer>
         </div>
     );
 };

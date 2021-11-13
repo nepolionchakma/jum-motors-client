@@ -101,11 +101,7 @@ const useFireBase = () => {
             .finally(() => setIsLoading(false));
     }
 
-    // user setup
-    // const setUserName = () => {
-    //     updateProfile(auth.currentUser, { displayName: name })
-    //         .then(result => { })
-    // }
+
     const verifyEmail = () => {
         sendEmailVerification(auth.currentUser)
             .then(result => { })
@@ -167,6 +163,8 @@ const useFireBase = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
+
+
     // Review Data Load
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
@@ -174,6 +172,7 @@ const useFireBase = () => {
             .then(res => res.json())
             .then(data => setReviews(data))
     }, []);
+
     // orders Data Load
     const [orders, setOrders] = useState([]);
     useEffect(() => {
@@ -181,6 +180,8 @@ const useFireBase = () => {
             .then(res => res.json())
             .then(data => setOrders(data))
     }, []);
+    console.log(orders)
+
     // UserData Load
     const [usersData, setUsersData] = useState([]);
     useEffect(() => {

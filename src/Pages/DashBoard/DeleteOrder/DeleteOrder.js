@@ -3,10 +3,12 @@ import { Button } from 'react-bootstrap';
 import useFireBase from '../../../Hooks/useFireBase';
 
 const DeleteOrder = () => {
+
     const { orders, setOrders } = useFireBase();
     const reload = () => {
         window.location.reload(false);
     }
+    console.log(orders)
     const handleDelete = id => {
 
         const url = `https://secure-lowlands-87242.herokuapp.com/orders/${id}`;
@@ -23,23 +25,42 @@ const DeleteOrder = () => {
 
             })
     }
+
     return (
         <div className="">
-            {
-                orders.map(order =>
-                    <div
-                        key={order._id}
-                        className="my-3 row"
-                    >
-                        <div className="col-lg-6">
-                            <h5>{order._id}</h5>
-                        </div>
-                        <div className="col-lg-6">
-                            <Button className="btn btn-danger" onClick={() => handleDelete(order._id)}>Delete</Button>
-                        </div>
-                    </div>
-                )
-            }
+            <h4 className="my-5 fw-bold text-danger">Manage All Orders</h4>
+            <table className="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Address: </th>
+                        <th scope="col">Items</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+
+
+                {
+                    orders.map(order =>
+
+                        <tbody
+                            key={order._id}
+                        >
+                            <tr>
+                                <td>{order.name}</td>
+                                <td>{order.email}</td>
+                                <td>{order.price}</td>
+                                <td> {order.total}</td>
+                                <td>{order.totalQuantity}</td>
+                                <td><Button className="btn btn-danger" onClick={() => handleDelete(order._id)}>Delete</Button></td>
+                            </tr>
+                        </tbody>
+                    )
+                }
+            </table>
+
         </div>
     );
 };

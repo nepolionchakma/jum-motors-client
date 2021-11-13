@@ -4,7 +4,7 @@ import OrderItems from '../OrderItems/OrderItems';
 // import PlaceOrder from '../PlaceOrder/PlaceOrder';
 
 const Cart = (props) => {
-    const { cart } = props;
+    const { cart, handleRemove, } = props;
     const { user } = useAuth();
     console.log(cart)
 
@@ -21,7 +21,7 @@ const Cart = (props) => {
     }
 
 
-    const initialInfo = { name: user.displayName, email: user.email, address: "" };
+    const initialInfo = { name: user.displayName, email: user.email, phone: "", address: "" };
     const [ordersData, setOrdersData] = useState(initialInfo);
 
     const handleOnBlur = e => {
@@ -43,6 +43,7 @@ const Cart = (props) => {
             totalQuantity: totalQuantity,
             total: total,
         }
+        console.log(orderItem)
         // send data 
         fetch("https://secure-lowlands-87242.herokuapp.com/users", {
             method: "PUT",
@@ -62,39 +63,26 @@ const Cart = (props) => {
             body: JSON.stringify(orderItem)
         })
             .then()
+        handleRemove();
         // console.log(iteorderItemm)
         e.preventDefault();
     }
     // const [ordersDetail, setOrdersDetail] = useState();
     // console.log(ordersDetail)
     return (
-        <div className="pb-4">
+        <div className="pb-4 border p-2">
             <h3 className="my-5">Orders Summary</h3>
             <h4>Items : {totalQuantity}</h4>
             <hr />
             <h4>Total : {total}$</h4>
             {
                 cart.map(product =>
-                    // <div
-
-                    //     key={product._id}
-                    //     product={product}
-                    //     total={total}
-                    //     totalQuantity={totalQuantity}
-                    // >
                     <OrderItems
                         key={product._id}
                         product={product}
                         total={total}
                         totalQuantity={totalQuantity}
                     ></OrderItems>
-                    //     <PlaceOrder
-                    //         key={product._id}
-                    //         product={product}
-                    //         total={total}
-                    //         totalQuantity={totalQuantity}
-                    //     ></PlaceOrder>
-                    // </div>
                 )
             }
             <form onSubmit={handleOrdersDataSubmit}>
@@ -102,9 +90,11 @@ const Cart = (props) => {
                 <br />
                 <input className="w-100 my-1" onBlur={handleOnBlur} type="text" name="email" id="" defaultValue={user.email} />
                 <br />
-                <input className="w-100 my-1" onBlur={handleOnBlur} type="text" name="address" id="" defaultValue={user.address} />
+                <input className="w-100 my-1" onBlur={handleOnBlur} type="text" name="phone" id="" defaultValue={user.phone} placeholder="Phone" required />
                 <br />
-                <input type="submit" value="Place Order" />
+                <input className="w-100 my-1" onBlur={handleOnBlur} type="text" name="address" id="" defaultValue={user.address} placeholder="Address" required />
+                <br />
+                <input type="submit" value="Place Order Now" />
             </form>
 
         </div>

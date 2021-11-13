@@ -1,7 +1,6 @@
 import React from 'react';
 import useFireBase from '../../Hooks/useFireBase';
 import Product from '../Product/Product';
-import { Link } from 'react-router-dom';
 
 
 const AllProducts = () => {

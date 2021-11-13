@@ -7,17 +7,7 @@ const AllUsers = () => {
     console.log(usersData)
     return (
         <div>
-            <h6>all Users</h6>
-            {/* {
-                usersData.map(user =>
-                    <div
-                        key={user._id}
-                    >
-                        <li>{user.displayName}</li>
-                        
-                    </div>
-                )
-            } */}
+            <h4 className="my-5 fw-bold text-danger">All Users</h4>
             <DeleteUser></DeleteUser>
         </div>
     );

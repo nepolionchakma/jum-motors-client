@@ -25,19 +25,33 @@ const DeleteUser = () => {
     }
     return (
         <div className="row">
-            {
-                usersData.map(user =>
-                    <div
-                        key={user._id}
-                        className="my-3 col-lg-4"
-                    >
+            <table className="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
 
-                        <h5>{user.displayName}</h5>
-                        <h5>{user.email}</h5>
-                        <Button className="btn btn-danger" onClick={() => handleDelete(user._id)}>Delete</Button>
-                    </div>
-                )
-            }
+
+                {
+                    usersData.map(user =>
+                        <tbody
+                            key={user._id}
+                        >
+                            <tr>
+                                <td>{user.displayName}</td>
+                                <td>{user.email}</td>
+                                <td><Button className="btn btn-danger" onClick={() => handleDelete(user._id)}>Delete</Button></td>
+
+                            </tr>
+
+                        </tbody>
+                    )
+                }
+            </table>
+
         </div>
     );
 };
