@@ -5,9 +5,9 @@ import useFireBase from '../../Hooks/useFireBase';
 const DeleteUser = () => {
 
     const { usersData, setUsersData } = useFireBase();
-    const reload = () => {
-        window.location.reload(false);
-    }
+    // const reload = () => {
+    //     window.location.reload(false);
+    // }
     // 
 
     const handleDelete = id => {
@@ -21,7 +21,7 @@ const DeleteUser = () => {
                 if (data.deletedCount > 0) {
                     const remaining = usersData.filter(user => usersData._id !== id);
                     setUsersData(remaining);
-                    reload();
+                    // reload();
                 }
 
             })

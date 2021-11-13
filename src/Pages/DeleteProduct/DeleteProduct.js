@@ -4,9 +4,9 @@ import useFireBase from '../../Hooks/useFireBase';
 
 const DeleteProduct = () => {
     const { products, setProducts } = useFireBase();
-    const reload = () => {
-        window.location.reload(false);
-    }
+    // const reload = () => {
+    //     window.location.reload(false);
+    // }
     const handleDelete = id => {
 
         const url = `https://secure-lowlands-87242.herokuapp.com/products/${id}`;
@@ -18,7 +18,7 @@ const DeleteProduct = () => {
                 if (data.deletedCount > 0) {
                     const remaining = products.filter(product => products._id !== id);
                     setProducts(remaining);
-                    reload();
+                    // reload();
                 }
 
             })

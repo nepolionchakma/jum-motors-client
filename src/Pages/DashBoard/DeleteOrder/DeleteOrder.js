@@ -5,9 +5,9 @@ import useFireBase from '../../../Hooks/useFireBase';
 const DeleteOrder = () => {
 
     const { orders, setOrders } = useFireBase();
-    const reload = () => {
-        window.location.reload(false);
-    }
+    // const reload = () => {
+    //     window.location.reload(false);
+    // // }
     // Popup
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -26,7 +26,7 @@ const DeleteOrder = () => {
                 if (data.deletedCount > 0) {
                     const remaining = orders.filter(order => orders._id !== id);
                     setOrders(remaining);
-                    reload();
+                    // reload();
                 }
 
             })
