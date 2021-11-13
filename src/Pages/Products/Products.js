@@ -8,9 +8,7 @@ const Products = () => {
 
     // Destructuring Data
     const { products } = useFireBase()
-    // console.log(products)
     const sliceData = products.slice(0, 6);
-    console.log(sliceData)
     return (
         <div className="container py-5">
             <h2 className="mt-3 fw-bold text-danger">Featured Items</h2>

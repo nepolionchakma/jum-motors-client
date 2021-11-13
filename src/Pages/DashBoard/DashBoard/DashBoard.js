@@ -8,7 +8,6 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import AddProduct from '../../AddProduct/AddProduct';
 import {
 
     Switch,
@@ -16,13 +15,11 @@ import {
     Link,
     useRouteMatch
 } from "react-router-dom";
-import Button from '@restart/ui/esm/Button';
 import DashBoardHome from '../DashBoardHome/DashBoardHome';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from '../../../Hooks/useAuth';
 import AdminRoute from '../../AdminRoute/AdminRoute';
 import AllUsers from '../../AllUsers/AllUsers';
-import DeleteOrder from '../DeleteOrder/DeleteOrder';
 import ManageAllProducts from '../ManageAllProducts/ManageAllProducts';
 import AllOrders from '../AllOrders/AllOrders';
 
@@ -32,7 +29,7 @@ const DashBoard = (props) => {
     let { path, url } = useRouteMatch();
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    const { admin, handleSignOut } = useAuth();
+    const { admin, handleSignOut, user } = useAuth();
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -43,6 +40,15 @@ const DashBoard = (props) => {
             <Divider />
             <table className="table  table-striped">
                 <tbody>
+                    <tr>
+                        <td><img
+                            style={{
+                                width: '30px',
+                                borderRadius: '50%',
+                                margin: '0px 5px'
+                            }}
+                            src={user.photoURL} alt="" /><span className="">{user.displayName}</span></td>
+                    </tr>
                     <tr>
                         <td><Link className="text-decoration-none" to="/">Home</Link></td>
                     </tr>

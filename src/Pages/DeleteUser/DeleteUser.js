@@ -3,10 +3,13 @@ import { Button } from 'react-bootstrap';
 import useFireBase from '../../Hooks/useFireBase';
 
 const DeleteUser = () => {
+
     const { usersData, setUsersData } = useFireBase();
     const reload = () => {
         window.location.reload(false);
     }
+    // 
+
     const handleDelete = id => {
 
         const url = `https://secure-lowlands-87242.herokuapp.com/users/${id}`;
@@ -30,6 +33,7 @@ const DeleteUser = () => {
                     <tr>
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
+                        <th scope="col">Role</th>
                         <th scope="col">Delete</th>
                     </tr>
                 </thead>
@@ -43,7 +47,10 @@ const DeleteUser = () => {
                             <tr>
                                 <td>{user.displayName}</td>
                                 <td>{user.email}</td>
-                                <td><Button className="btn btn-danger" onClick={() => handleDelete(user._id)}>Delete</Button></td>
+                                <td>{user.role}</td>
+                                <td><Button className="btn btn-danger" onClick={() => handleDelete(user._id)}>
+                                    Delete
+                                </Button></td>
 
                             </tr>
 

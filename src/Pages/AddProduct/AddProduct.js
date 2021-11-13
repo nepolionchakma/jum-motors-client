@@ -1,10 +1,12 @@
+import { Alert } from '@mui/material';
 import axios from 'axios';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import "./AddProduct.css"
 
 const AddService = () => {
 
+    const [success, setSuccess] = useState(false);
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
@@ -14,6 +16,7 @@ const AddService = () => {
                 if (res.data.insertedId) {
                     alert("Successfully added.");
                     reset();
+                    setSuccess(true);
                 }
             })
     };
@@ -33,6 +36,7 @@ const AddService = () => {
                     <input  {...register("img")} placeholder="Image URL" required />
                     <input type="submit" />
                 </form>
+                {success && <Alert className="my-4" severity="success">Product Add successfully</Alert>}
             </div>
         </div>
     );

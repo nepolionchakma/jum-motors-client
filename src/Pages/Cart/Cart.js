@@ -1,12 +1,13 @@
+import { Alert } from '@mui/material';
 import React, { useState } from 'react';
 import useAuth from '../../Hooks/useAuth';
-import OrderItems from '../OrderItems/OrderItems';
 // import PlaceOrder from '../PlaceOrder/PlaceOrder';
 
 const Cart = (props) => {
     const { cart, handleRemove, } = props;
     const { user } = useAuth();
-    console.log(cart)
+    // console.log(cart)
+    const [success, setSuccess] = useState(false);
 
     let totalQuantity = 0;
     let total = 0;
@@ -29,7 +30,7 @@ const Cart = (props) => {
         const value = e.target.value;
         const newInfo = { ...ordersData };
         newInfo[field] = value;
-        console.log(newInfo)
+        // console.log(newInfo)
         setOrdersData(newInfo);
     }
 
@@ -43,7 +44,7 @@ const Cart = (props) => {
             totalQuantity: totalQuantity,
             total: total,
         }
-        console.log(orderItem)
+        // console.log(orderItem)
         // send data 
         fetch("https://secure-lowlands-87242.herokuapp.com/users", {
             method: "PUT",
@@ -64,6 +65,7 @@ const Cart = (props) => {
         })
             .then()
         handleRemove();
+        setSuccess(true);
         // console.log(iteorderItemm)
         e.preventDefault();
     }
@@ -75,7 +77,7 @@ const Cart = (props) => {
             <h4>Items : {totalQuantity}</h4>
             <hr />
             <h4>Total : {total}$</h4>
-            {
+            {/* {
                 cart.map(product =>
                     <OrderItems
                         key={product._id}
@@ -84,7 +86,7 @@ const Cart = (props) => {
                         totalQuantity={totalQuantity}
                     ></OrderItems>
                 )
-            }
+            } */}
             <form onSubmit={handleOrdersDataSubmit}>
                 <input className="w-100 my-1" onBlur={handleOnBlur} type="text" name="displayName" id="" defaultValue={user.displayName} />
                 <br />
@@ -96,7 +98,7 @@ const Cart = (props) => {
                 <br />
                 <input type="submit" value="Place Order Now" />
             </form>
-
+            {success && <Alert className="my-4" severity="success">Place Order successfully</Alert>}
         </div>
     );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from '../../Shared/Menu/Menu';
+
 import Banner from '../Banner/Banner';
 import CarMakers from '../CarMakers/CarMakers';
 import ChooseUs from '../ChooseUs/ChooseUs';

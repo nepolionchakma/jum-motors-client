@@ -15,9 +15,8 @@ import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import DashBoard from './Pages/DashBoard/DashBoard/DashBoard';
 import AllProducts from './Pages/AllProducts/AllProducts';
-import Cart from './Pages/Cart/Cart';
-import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
-import AllOrders from './Pages/DashBoard/AllOrders/AllOrders';
+import ContactUs from '../src/Pages/ContactUs/ContactUs';
+import Error from '../src/Pages/Error/Error';
 
 function App() {
   return (
@@ -32,21 +31,18 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
-            <Route path="/order">
-              <AllOrders></AllOrders>
-            </Route>
-            <Route path="/products/:_id">
+            <PrivateRoute path="/products/:_id">
               <ProductDetails />
+            </PrivateRoute>
+            <Route path="/contact-us">
+              <ContactUs />
             </Route>
             <Route path="/cars">
               <AllProducts />
             </Route>
-            <Route path="/place-order">
-              <PlaceOrder />
-            </Route>
-            <Route path="/add-product">
+            <PrivateRoute path="/add-product">
               <AddProduct />
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/manage-products">
               <ManageProducts />
             </PrivateRoute>
@@ -58,6 +54,9 @@ function App() {
             </Route>
             <Route path="/signup">
               <SignUp />
+            </Route>
+            <Route path="*">
+              <Error />
             </Route>
           </Switch>
         </Router>

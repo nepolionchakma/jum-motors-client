@@ -23,3 +23,56 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
+.homeOffer img{
+    height: 200px;
+    background-size: cover;
+    transition: .5s;
+}
+.homeOfferImg{
+    
+    overflow: hidden;
+    position: relative;
+}
+.homeOffer{
+    transition: .5s;
+}
+.homeOffer:hover img{
+    transform: scale(1.05,1.05);
+    transition: .5s;
+}
+.homeOffer:hover .left{
+   margin-left: 10px;
+   transition: .5s;
+}
+.homeOffer:hover h3{
+   color: #dc3545;
+}
+.homeOffer:hover right{
+   margin-right: 5px;
+}
+.myIcon{
+    transition: .5s;
+}
+.homeOffer:hover .myIcon{
+    margin-left: 5px;
+   transition: .5s;
+}
+.homeOfferImg p {
+    position: absolute;
+    background-color: #dc3545;
+    top: -13px;
+    left: -29px;
+    color: white;
+    transform: rotate(-35deg);
+    padding: 16px 0 1px 0;
+    z-index: 100;
+    margin-top: 0px;
+    width: 90px;
+}
+.homeOfferCardIn:hover a{
+    color: #dc3545!important;
+    transition: .5s;
+}
+.text-color{
+    color:#dc3545;
+}

@@ -1,12 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFly, faGithub, faGoogle, faLaravel } from '@fortawesome/free-brands-svg-icons';
-import { faGamepad, faGasPump, faPlaceOfWorship } from '@fortawesome/free-solid-svg-icons';
+import { faFly, faLaravel } from '@fortawesome/free-brands-svg-icons';
+import { faGasPump, faPlaceOfWorship } from '@fortawesome/free-solid-svg-icons';
+import "./ChooseUs.css"
 
 const ChooseUs = () => {
     return (
-        <div className="container py-5">
-            <h3 className="my-5">Why Choose Us</h3>
+        <div className="container  py-5">
+            <h3 className="my-5 fw-bold text-danger">Why Choose Us</h3>
             <div className="row m-0">
                 <div className="col-lg-3">
                     <div className="row">

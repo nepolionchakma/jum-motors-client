@@ -1,7 +1,6 @@
 import { faClock, faGasPump, } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaypal } from '@fortawesome/free-brands-svg-icons';
-import { TextField } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import { useParams } from 'react-router';
@@ -38,7 +37,7 @@ const ProductDetails = () => {
     }
     const handleRemove = _id => {
         const newCart = cart.filter(product => product._id !== _id)
-        console.log(newCart)
+        // console.log(newCart)
         setCart(newCart);
         removeFromDb(product);
         clearTheCart();

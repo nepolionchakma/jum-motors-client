@@ -6,7 +6,7 @@ import ReactVisibilitySensor from "react-visibility-sensor";
 const ClientViews = () => {
 
     return (
-        <div className="p-5 workingExperiences bg-warning">
+        <div className="p-5 chooseBG workingExperiences bg-warning">
             <h1 className="customFont  text-white fw-bold">Client Views</h1>
             <div className="row m-0 justify-content-evenly py-5">
 

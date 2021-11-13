@@ -162,6 +162,7 @@ const useFireBase = () => {
         fetch("https://secure-lowlands-87242.herokuapp.com/products")
             .then(res => res.json())
             .then(data => setProducts(data))
+        setIsLoading(false);
     }, []);
 
 
@@ -171,6 +172,7 @@ const useFireBase = () => {
         fetch("https://secure-lowlands-87242.herokuapp.com/reviews")
             .then(res => res.json())
             .then(data => setReviews(data))
+        setIsLoading(false);
     }, []);
 
     // orders Data Load
@@ -179,8 +181,9 @@ const useFireBase = () => {
         fetch("https://secure-lowlands-87242.herokuapp.com/orders")
             .then(res => res.json())
             .then(data => setOrders(data))
+        setIsLoading(false);
     }, []);
-    console.log(orders)
+    // console.log(orders)
 
     // UserData Load
     const [usersData, setUsersData] = useState([]);
@@ -188,6 +191,7 @@ const useFireBase = () => {
         fetch("https://secure-lowlands-87242.herokuapp.com/users")
             .then(res => res.json())
             .then(data => setUsersData(data))
+        setIsLoading(false);
     }, []);
 
     const saveUser = (email, password, displayName, method) => {
@@ -200,6 +204,7 @@ const useFireBase = () => {
             body: JSON.stringify(user)
         })
             .then()
+        setIsLoading(false);
     }
 
     return {
@@ -218,7 +223,7 @@ const useFireBase = () => {
         handleSignIn,
         loginSuccess,
         emailError,
-        passwordError, isLoading, orders, setOrders,
+        passwordError, isLoading, orders, setOrders, setIsLoading,
         errorpass, clearError, logInUser, success, reviews, usersData, setUsersData,
         setSuccessLogin, setError, setUser, successLogin, admin,
         // token

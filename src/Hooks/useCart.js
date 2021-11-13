@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { addToDb, getStoredCart, clearTheCart } from '../LocalDataBase/LocalDataBase';
+import { addToDb, getStoredCart } from '../LocalDataBase/LocalDataBase';
 import useFireBase from './useFireBase';
 
 

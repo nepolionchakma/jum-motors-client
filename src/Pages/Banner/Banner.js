@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import bg from "../../Images/bannerBg.jpg"
 import bgp from "../../Images/bannerpic.jpg"

@@ -6,13 +6,16 @@ import { faClock, faGasPump, } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaypal } from '@fortawesome/free-brands-svg-icons';
 import { faStar } from '@fortawesome/free-regular-svg-icons';
+import "./Product.css"
 
 const Product = (props) => {
     const { name, price, img, _id, details, year, fuel, rating } = props.product;
     return (
-        <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-3 text-start p-2">
+        <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-3 text-start p-2 homeOffer">
             <div className="border p-3">
-                <img className="w-100 my-2" src={img} alt="" />
+                <div className="homeOfferImg">
+                    <img className="w-100 my-2" src={img} alt="" />
+                </div>
                 <h3>{name}</h3>
 
                 <span><FontAwesomeIcon className="text-danger my-auto" icon={faClock} /> {year}</span>

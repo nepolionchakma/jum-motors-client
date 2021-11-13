@@ -6,7 +6,7 @@ const ReviewsItems = () => {
     const { reviews } = useFireBase({})
     return (
         <div className="row m-0 py-5 ">
-            <h2 className="my-4">Customer Review</h2>
+            <h2 className="my-4  fw-bold text-danger">Customer Review</h2>
             {
                 reviews.map(review =>
                     <div

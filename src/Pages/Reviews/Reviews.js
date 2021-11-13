@@ -6,6 +6,7 @@ import * as React from 'react';
 import Rating from '@mui/material/Rating';
 import Box from '@mui/material/Box';
 import StarIcon from '@mui/icons-material/Star';
+import { Alert } from '@mui/material';
 
 const labels = {
     0.5: 'Useless',
@@ -24,13 +25,14 @@ const labels = {
 
 const Reviews = () => {
     const { user } = useAuth();
+    const [success, setSuccess] = useState(false);
     const initialInfo = { name: user.displayName, email: user.email, message: "" };
     const [review, setReview] = useState(initialInfo);
 
     // Rating
     const [value, setValue] = React.useState(2);
     const [hover, setHover] = React.useState(-1);
-    console.log(value)
+    // console.log(value)
 
 
     const handleOnBlur = e => {
@@ -38,7 +40,7 @@ const Reviews = () => {
         const inputValue = e.target.value;
         const newInfo = { ...review };
         newInfo[field] = inputValue;
-        console.log(newInfo)
+        // console.log(newInfo)
         setReview(newInfo);
     }
 
@@ -61,6 +63,8 @@ const Reviews = () => {
             body: JSON.stringify(orderItem)
         })
             .then()
+        setSuccess(true);
+
         // console.log(iteorderItemm)
         e.preventDefault();
     }
@@ -103,6 +107,7 @@ const Reviews = () => {
                     <input type="submit" value="Review Submit" />
                 </form>
             </Container>
+            {success && <Alert className="my-4" severity="success">Product Review successfully</Alert>}
         </div>
     );
 };

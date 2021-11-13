@@ -9,7 +9,7 @@ const CarMakers = () => {
     }, []);
     return (
         <div className="container my-5">
-            <h3 className="my-5">Cars Makers</h3>
+            <h3 className="my-5  text-danger fw-bold">Cars Makers</h3>
             <div className="row m-0 my-4">
                 {
                     carMakers.map(maker =>

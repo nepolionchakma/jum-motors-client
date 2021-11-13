@@ -1,4 +1,4 @@
-import { Alert, TextField } from '@mui/material';
+import { Alert } from '@mui/material';
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 // import { Button } from 'react-bootstrap';
@@ -42,7 +42,7 @@ const MakeAdmin = () => {
                 ></input>
                 <Button className="btn btn-primary" type="submit">Make admin</Button>
             </form>
-            {success && <Alert severity="success">Made Admin successfully</Alert>}
+            {success && <Alert className="my-4" severity="success">Make Admin successfully</Alert>}
         </div>
     );
 };
