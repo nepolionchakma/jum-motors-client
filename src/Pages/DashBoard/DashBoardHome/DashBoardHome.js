@@ -9,7 +9,7 @@ const DashBoardHome = () => {
     // const { orders, setOrders } = useFireBase();
     console.log(orderItems)
     useEffect(() => {
-        fetch(`https://secure-lowlands-87242.herokuapp.com/orders?email=${user.email}`)
+        fetch(`https://secure-lowlands-87242.herokuapp.com/orders/${user.email}`)
             .then(res => res.json())
             .then(data => setOrderItems(data))
     }, []);
